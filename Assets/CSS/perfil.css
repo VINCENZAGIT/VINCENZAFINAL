@@ -1,0 +1,337 @@
+#perfil-container {
+    padding-top: 10vh;
+    min-height: 90vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#perfil-header {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+#perfil-header h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#perfil-content {
+    width: 80%;
+    display: flex;
+    gap: 4vh;
+    margin-bottom: 4vh;
+}
+
+#perfil-foto-section {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+#foto-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgb(255, 232, 206);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#foto-container:hover {
+    transform: scale(1.05);
+    border-color: rgb(0, 0, 0);
+}
+
+#foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#foto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+}
+
+#foto-container:hover #foto-overlay {
+    opacity: 1;
+}
+
+#foto-overlay i {
+    font-size: 2rem;
+    margin-bottom: 0.5vh;
+}
+
+#foto-overlay span {
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#perfil-info-section {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+#info-pessoais, #info-endereco {
+    background-color: rgb(255, 232, 206);
+    border-radius: 15px;
+    padding: 2vh;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+#info-pessoais h2, #info-endereco h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    color: rgb(0, 0, 0);
+    margin: 0 0 2vh 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-bottom: 1vh;
+}
+
+.info-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vh;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.info-item label {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.info-value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 1vh;
+    min-height: 3vh;
+}
+
+.info-value span {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+}
+
+.edit-icon {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    transition: all 0.2s ease;
+    padding: 0.5vh;
+}
+
+.edit-icon:hover {
+    color: rgb(255, 232, 206);
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.edit-input {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    padding: 1vh;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.edit-input:focus {
+    outline: none;
+    border-color: rgb(255, 232, 206);
+    box-shadow: 0 0 5px rgba(255, 232, 206, 0.5);
+}
+
+#perfil-actions {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 3vh;
+    margin-bottom: 4vh;
+}
+
+#perfil-actions button {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1.5vh 3vh;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    background-color: rgb(255, 232, 206);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+#perfil-actions button:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 232, 206);
+    transform: scale(1.05);
+}
+
+#perfil-actions button:active {
+    transform: scale(0.98);
+}
+
+/* Dark Mode */
+.dark-mode #perfil-container {
+    background-color: #1a1a1a;
+}
+
+.dark-mode #perfil-header h1 {
+    color: #e0e0e0;
+}
+
+.dark-mode #info-pessoais,
+.dark-mode #info-endereco {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+.dark-mode #info-pessoais h2,
+.dark-mode #info-endereco h2 {
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.dark-mode .info-item label {
+    color: #e0e0e0;
+}
+
+.dark-mode .info-value {
+    background-color: #1a1a1a;
+    border-color: #444;
+}
+
+.dark-mode .info-value span {
+    color: #e0e0e0;
+}
+
+.dark-mode .edit-icon {
+    color: #e0e0e0;
+}
+
+.dark-mode .edit-icon:hover {
+    color: #2d2d2d;
+    background-color: #e0e0e0;
+}
+
+.dark-mode .edit-input {
+    background-color: #1a1a1a;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.dark-mode .edit-input:focus {
+    border-color: #666;
+    box-shadow: 0 0 5px rgba(102, 102, 102, 0.5);
+}
+
+.dark-mode #perfil-actions button {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.dark-mode #perfil-actions button:hover {
+    background-color: #e0e0e0;
+    color: #2d2d2d;
+}
+
+.dark-mode #foto-container {
+    border-color: #444;
+}
+
+.dark-mode #foto-container:hover {
+    border-color: #e0e0e0;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 1200px) {
+    #perfil-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #perfil-foto-section {
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+    
+    #perfil-info-section {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #perfil-container {
+        width: 95%;
+    }
+    
+    #perfil-header,
+    #perfil-content,
+    #perfil-actions {
+        width: 95%;
+    }
+    
+    .info-group {
+        grid-template-columns: 1fr;
+    }
+    
+    #perfil-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #perfil-actions button {
+        width: 80%;
+        justify-content: center;
+    }
+    
+    #foto-container {
+        width: 150px;
+        height: 150px;
+    }
+}

@@ -1,0 +1,99 @@
+/* ARQUIVO: style.css (Versão Protegida para Pop-up) */
+
+/* --- IMPORTANTE: Removi a regra 'body' que quebrava o site --- */
+
+/* Configuração dos containers principais (Registro e Login) */
+#loginPopup #registro,
+#loginPopup #login {
+    width: 100%; /* Ocupa o espaço do pop-up */
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    min-height: 50vh; /* Altura mínima ajustada */
+    /* border: 2px solid rgb(0, 0, 0); -> Removi pois o pop-up já tem borda */
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    text-align: center; 
+    background-color: rgb(255, 232, 206);
+}
+
+/* Área interna dos formulários */
+#loginPopup #baseRegistro,
+#loginPopup #baseLogin {
+    min-height: auto;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* Estilo dos Inputs (Caixas de texto) */
+#loginPopup .input-container input { 
+    text-align: left;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background: rgb(255, 255, 255); /* Mudei para branco para destacar do fundo bege */
+    width: 70%;
+    padding: 8px 10px;
+    font-size: 16px;
+    color: #000000;
+    transition: .2s;
+    margin-bottom: 10px; /* Espaço entre os inputs */
+}
+
+/* Efeito ao passar o mouse no input */
+#loginPopup .input-container input:hover {
+    width: 80%;
+    font-size: 17px; /* Ajustei para não quebrar o layout */
+}
+
+/* Estilo do Botão (Cadastrar / Entrar) */
+#loginPopup #botao, 
+#loginPopup #botao-registro, 
+#loginPopup #botao-login {
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    margin-top: 20px;
+    transition: .2s;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#loginPopup #botao:hover,
+#loginPopup #botao-registro:hover, 
+#loginPopup #botao-login:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+#loginPopup #botao:active,
+#loginPopup #botao-registro:active, 
+#loginPopup #botao-login:active {
+    padding: 10px 30px; /* Mantém o tamanho */
+    transform: scale(0.95); /* Efeito de clique */
+}
+
+/* Ajuste dos textos (Labels) */
+#loginPopup label, 
+#loginPopup span {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Centralizar campo de data de nascimento */
+#loginPopup #container-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginPopup #date1 {
+    text-align: center;
+}
